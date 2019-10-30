@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module practical5_agentframework_xy</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>practical5_agentframework_xy</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cliz%5Cdocuments%5Cpython%5Cgeog5995%5Cpracticals%5Cabm%5Crestart%5Cpracticals---final%5Csubmission%5Cpractical5_agentframework_xy.py">c:\users\liz\documents\python\geog5995\practicals\abm\restart\practicals---final\submission\practical5_agentframework_xy.py</a></font></td></tr></table>
+    <p><tt>Created&nbsp;on&nbsp;Mon&nbsp;Sep&nbsp;30&nbsp;17:24:49&nbsp;2019<br>
+&nbsp;<br>
+@author:&nbsp;Liz&nbsp;Osbourn<br>
+This&nbsp;file&nbsp;is&nbsp;covered&nbsp;by&nbsp;the&nbsp;LICENSING&nbsp;file&nbsp;in&nbsp;the&nbsp;root&nbsp;of&nbsp;this&nbsp;project.<br>
+Creates&nbsp;<a href="#Agent">Agent</a>&nbsp;class<br>
+Defines&nbsp;move()&nbsp;behaviour&nbsp;of&nbsp;<a href="#Agent">Agent</a><br>
+agent's&nbsp;y&nbsp;and&nbsp;x&nbsp;move&nbsp;randomly&nbsp;+-1,&nbsp;torus&nbsp;solution&nbsp;to&nbsp;deal&nbsp;with&nbsp;boundary&nbsp;effects<br>
+Protects&nbsp;y&nbsp;and&nbsp;x&nbsp;coordinates&nbsp;using&nbsp;_y&nbsp;and&nbsp;_x<br>
+Sets&nbsp;getter,&nbsp;setter&nbsp;and&nbsp;del&nbsp;&nbsp;of&nbsp;_y&nbsp;and&nbsp;_x&nbsp;with&nbsp;property()</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="random.html">random</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="practical5_agentframework_xy.html#Agent">Agent</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Agent">class <strong>Agent</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Agent-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Initiates&nbsp;<a href="#Agent">Agent</a>&nbsp;class<br>
+&nbsp;<br>
+Agents&nbsp;assigned&nbsp;random&nbsp;(y,x)&nbsp;co&nbsp;ordinates&nbsp;in&nbsp;[0,100]<br>
+Protects&nbsp;y&nbsp;and&nbsp;x&nbsp;coordinates&nbsp;using&nbsp;_y&nbsp;and&nbsp;_x<br>
+Sets&nbsp;getter,&nbsp;setter&nbsp;and&nbsp;del&nbsp;&nbsp;of&nbsp;_y&nbsp;and&nbsp;_x&nbsp;with&nbsp;property()</tt></dd></dl>
+
+<dl><dt><a name="Agent-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Overwrites&nbsp;__str__&nbsp;to&nbsp;return&nbsp;x&nbsp;and&nbsp;y&nbsp;coordinate&nbsp;of&nbsp;agent</tt></dd></dl>
+
+<dl><dt><a name="Agent-delx"><strong>delx</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Agent-dely"><strong>dely</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Agent-getx"><strong>getx</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Agent-gety"><strong>gety</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Agent-move"><strong>move</strong></a>(self)</dt><dd><tt>Defines&nbsp;<a href="#Agent-move">move</a>()&nbsp;behaviour&nbsp;of&nbsp;<a href="#Agent">Agent</a><br>
+agent's&nbsp;y&nbsp;and&nbsp;x&nbsp;move&nbsp;randomly&nbsp;+-1,&nbsp;torus&nbsp;solution&nbsp;to&nbsp;deal&nbsp;with&nbsp;boundary&nbsp;effects</tt></dd></dl>
+
+<dl><dt><a name="Agent-setx"><strong>setx</strong></a>(self, value)</dt></dl>
+
+<dl><dt><a name="Agent-sety"><strong>sety</strong></a>(self, value)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>x</strong></dt>
+<dd><tt>I'm&nbsp;the&nbsp;'x'&nbsp;property.</tt></dd>
+</dl>
+<dl><dt><strong>y</strong></dt>
+<dd><tt>I'm&nbsp;the&nbsp;'y'&nbsp;property.</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

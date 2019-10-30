@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module practical7_model</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>practical7_model</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cliz%5Cdocuments%5Cpython%5Cgeog5995%5Cpracticals%5Cabm%5Crestart%5Cpracticals---final%5Csubmission%5Cpractical7_model.py">c:\users\liz\documents\python\geog5995\practicals\abm\restart\practicals---final\submission\practical7_model.py</a></font></td></tr></table>
+    <p><tt>Created&nbsp;on&nbsp;&nbsp;oct&nbsp;13&nbsp;17:24:49&nbsp;2019<br>
+&nbsp;<br>
+@author:&nbsp;Liz&nbsp;Osbourn<br>
+This&nbsp;file&nbsp;is&nbsp;covered&nbsp;by&nbsp;the&nbsp;LICENSING&nbsp;file&nbsp;in&nbsp;the&nbsp;root&nbsp;of&nbsp;this&nbsp;project.<br>
+Import&nbsp;in.txt&nbsp;into&nbsp;environment[]&nbsp;to&nbsp;create&nbsp;agent&nbsp;environment<br>
+Sets&nbsp;sys.argv&nbsp;parameters:&nbsp;num_of_iterations,&nbsp;num_of_agents,&nbsp;neighbourhood<br>
+Num_of_agents&nbsp;=&nbsp;int(sys.argv[1])<br>
+Num_of_iterations&nbsp;&nbsp;=&nbsp;int(sys.argv[2])<br>
+Neighbourhood&nbsp;=&nbsp;int(sys.argv[3])<br>
+Exits&nbsp;if&nbsp;incorrect&nbsp;number&nbsp;of&nbsp;parameters&nbsp;entered<br>
+Creates&nbsp;num_of_agents&nbsp;agents&nbsp;of&nbsp;Agent&nbsp;class&nbsp;using&nbsp;practical7_agentframework_xy.py&nbsp;module<br>
+Agents&nbsp;stored&nbsp;in&nbsp;agents[]<br>
+Agents&nbsp;shuffled&nbsp;then&nbsp;call&nbsp;eat()&nbsp;move()&nbsp;and&nbsp;share_with_neighbour()&nbsp;each&nbsp;iteration<br>
+Plots&nbsp;agents&nbsp;final&nbsp;postion&nbsp;after&nbsp;num_of_iterations&nbsp;iterations<br>
+Writes&nbsp;environment&nbsp;to&nbsp;environment_eaten.txt&nbsp;after&nbsp;model&nbsp;has&nbsp;run<br>
+Appends&nbsp;all&nbsp;agent&nbsp;stores&nbsp;to&nbsp;agents_stores.txt<br>
+Appends&nbsp;total&nbsp;amount&nbsp;eaten&nbsp;by&nbsp;all&nbsp;agents&nbsp;to&nbsp;all_agents_stores_total.txt</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="csv.html">csv</a><br>
+<a href="matplotlib.html">matplotlib</a><br>
+</td><td width="25%" valign=top><a href="practical7_agentframework.html">practical7_agentframework</a><br>
+<a href="random.html">random</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>agents</strong> = [&lt;practical7_agentframework.Agent object&gt;, &lt;practical7_agentframework.Agent object&gt;, &lt;practical7_agentframework.Agent object&gt;]<br>
+<strong>agents_store_line</strong> = [20, 20, 20]<br>
+<strong>agents_stores</strong> = &lt;_io.TextIOWrapper name='agents_stores.txt' mode='a' encoding='cp1252'&gt;<br>
+<strong>environment</strong> = [[220.0, 221.0, 222.0, 223.0, 226.0, 230.0, 234.0, 238.0, 241.0, 241.0, 242.0, 243.0, 243.0, 243.0, 244.0, 244.0, 245.0, 247.0, 249.0, 250.0, ...], [221.0, 222.0, 223.0, 224.0, 227.0, 231.0, 234.0, 238.0, 241.0, 241.0, 242.0, 243.0, 243.0, 243.0, 244.0, 244.0, 245.0, 247.0, 248.0, 249.0, ...], [222.0, 223.0, 223.0, 224.0, 228.0, 232.0, 235.0, 239.0, 241.0, 242.0, 242.0, 243.0, 243.0, 243.0, 244.0, 244.0, 245.0, 246.0, 247.0, 248.0, ...], [223.0, 224.0, 224.0, 225.0, 228.0, 232.0, 235.0, 239.0, 242.0, 242.0, 243.0, 243.0, 243.0, 243.0, 243.0, 244.0, 245.0, 246.0, 246.0, 247.0, ...], [226.0, 227.0, 228.0, 228.0, 231.0, 234.0, 237.0, 240.0, 242.0, 243.0, 243.0, 243.0, 243.0, 243.0, 243.0, 244.0, 244.0, 244.0, 245.0, 245.0, ...], [230.0, 231.0, 232.0, 232.0, 235.0, 237.0, 238.0, 240.0, 242.0, 243.0, 243.0, 243.0, 243.0, 243.0, 243.0, 243.0, 244.0, 244.0, 243.0, 243.0, ...], [233.0, 234.0, 235.0, 236.0, 238.0, 239.0, 239.0, 241.0, 242.0, 242.0, 243.0, 243.0, 243.0, 242.0, 243.0, 243.0, 244.0, 243.0, 243.0, 242.0, ...], [237.0, 238.0, 239.0, 240.0, 241.0, 241.0, 241.0, 241.0, 242.0, 242.0, 243.0, 243.0, 242.0, 242.0, 242.0, 243.0, 243.0, 242.0, 241.0, 241.0, ...], [241.0, 242.0, 242.0, 243.0, 243.0, 243.0, 242.0, 242.0, 242.0, 243.0, 243.0, 243.0, 243.0, 242.0, 242.0, 242.0, 242.0, 241.0, 240.0, 240.0, ...], [242.0, 243.0, 243.0, 244.0, 244.0, 243.0, 243.0, 242.0, 243.0, 243.0, 244.0, 243.0, 243.0, 242.0, 242.0, 242.0, 241.0, 240.0, 239.0, 239.0, ...], [244.0, 244.0, 244.0, 244.0, 244.0, 244.0, 243.0, 243.0, 243.0, 244.0, 244.0, 244.0, 243.0, 242.0, 241.0, 241.0, 240.0, 239.0, 238.0, 238.0, ...], [245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 244.0, 244.0, 244.0, 245.0, 245.0, 244.0, 243.0, 241.0, 240.0, 240.0, 240.0, 238.0, 238.0, 237.0, ...], [245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 244.0, 244.0, 244.0, 245.0, 245.0, 244.0, 242.0, 240.0, 240.0, 240.0, 240.0, 239.0, 238.0, 237.0, ...], [245.0, 245.0, 245.0, 244.0, 244.0, 244.0, 244.0, 244.0, 245.0, 245.0, 245.0, 243.0, 242.0, 240.0, 240.0, 240.0, 240.0, 238.0, 237.0, 235.0, ...], [245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 244.0, 245.0, 245.0, 245.0, 244.0, 243.0, 242.0, 240.0, 240.0, 240.0, 239.0, 237.0, 235.0, 233.0, ...], [245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 243.0, 243.0, 241.0, 240.0, 240.0, 238.0, 235.0, 233.0, 231.0, ...], [245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 243.0, 243.0, 243.0, 242.0, 241.0, 240.0, 237.0, 234.0, 232.0, 230.0, ...], [245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 243.0, 243.0, 243.0, 242.0, 240.0, 239.0, 236.0, 233.0, 231.0, 229.0, ...], [245.0, 245.0, 244.0, 244.0, 244.0, 244.0, 245.0, 245.0, 244.0, 244.0, 243.0, 243.0, 243.0, 241.0, 240.0, 239.0, 236.0, 233.0, 232.0, 230.0, ...], [244.0, 244.0, 244.0, 243.0, 243.0, 243.0, 244.0, 244.0, 244.0, 244.0, 243.0, 243.0, 242.0, 241.0, 239.0, 238.0, 236.0, 233.0, 232.0, 230.0, ...], ...]<br>
+<strong>environment_eaten</strong> = &lt;_io.TextIOWrapper name='environment_eaten.txt' mode='w' encoding='cp1252'&gt;<br>
+<strong>f</strong> = &lt;_io.TextIOWrapper name='all_agents_stores_total.txt' mode='a' encoding='cp1252'&gt;<br>
+<strong>i</strong> = 2<br>
+<strong>j</strong> = 1<br>
+<strong>line</strong> = [238.0, 237.0, 235.0, 233.0, 230.0, 228.0, 227.0, 226.0, 225.0, 224.0, 223.0, 223.0, 223.0, 223.0, 222.0, 222.0, 223.0, 223.0, 223.0, 223.0, ...]<br>
+<strong>neighbourhood</strong> = 20<br>
+<strong>num_of_agents</strong> = 3<br>
+<strong>num_of_iterations</strong> = 2<br>
+<strong>reader</strong> = &lt;_csv.reader object&gt;<br>
+<strong>row</strong> = [238.0, 237.0, 235.0, 233.0, 230.0, 228.0, 227.0, 226.0, 225.0, 224.0, 223.0, 223.0, 223.0, 223.0, 222.0, 222.0, 223.0, 223.0, 223.0, 223.0, ...]<br>
+<strong>rowlist</strong> = [238.0, 237.0, 235.0, 233.0, 230.0, 228.0, 227.0, 226.0, 225.0, 224.0, 223.0, 223.0, 223.0, 223.0, 222.0, 222.0, 223.0, 223.0, 223.0, 223.0, ...]<br>
+<strong>store_total</strong> = 60<br>
+<strong>value</strong> = 120.0<br>
+<strong>w</strong> = &lt;_csv.writer object&gt;</td></tr></table>
+</body></html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module practical4_modelx</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>practical4_modelx</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cliz%5Cdocuments%5Cpython%5Cgeog5995%5Cpracticals%5Cabm%5Crestart%5Cpracticals---final%5Csubmission%5Cpractical4_modelx.py">c:\users\liz\documents\python\geog5995\practicals\abm\restart\practicals---final\submission\practical4_modelx.py</a></font></td></tr></table>
+    <p><tt>Created&nbsp;on&nbsp;Mon&nbsp;Sep&nbsp;30&nbsp;17:24:49&nbsp;2019<br>
+&nbsp;<br>
+@author:&nbsp;Liz&nbsp;Osbourn<br>
+This&nbsp;file&nbsp;is&nbsp;covered&nbsp;by&nbsp;the&nbsp;LICENSING&nbsp;file&nbsp;in&nbsp;the&nbsp;root&nbsp;of&nbsp;this&nbsp;project.<br>
+magnitudes_of_agents&nbsp;sets&nbsp;different&nbsp;numbers&nbsp;of&nbsp;agents&nbsp;for&nbsp;the&nbsp;model<br>
+Makes&nbsp;num_of_agent&nbsp;agents,&nbsp;moves&nbsp;agents&nbsp;num_of_iterations&nbsp;iterations&nbsp;<br>
+and&nbsp;defines&nbsp;distance_between&nbsp;to&nbsp;calculate&nbsp;distance&nbsp;betwen&nbsp;2&nbsp;agents.<br>
+Agents&nbsp;have&nbsp;(y,x)&nbsp;coordinates<br>
+Implements&nbsp;torus&nbsp;solution&nbsp;to&nbsp;deal&nbsp;with&nbsp;boundary&nbsp;effect<br>
+Plots&nbsp;the&nbsp;time&nbsp;to&nbsp;run&nbsp;distance_between&nbsp;against&nbsp;different&nbsp;numbers&nbsp;of&nbsp;agents</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="matplotlib.html">matplotlib</a><br>
+</td><td width="25%" valign=top><a href="operator.html">operator</a><br>
+</td><td width="25%" valign=top><a href="random.html">random</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-distance_between"><strong>distance_between</strong></a>(agents_row_a, agents_row_b)</dt><dd><tt>calculate&nbsp;distance&nbsp;between&nbsp;2&nbsp;agents</tt></dd></dl>
+ <dl><dt><a name="-perf_counter"><strong>perf_counter</strong></a>(...)</dt><dd><tt><a href="#-perf_counter">perf_counter</a>()&nbsp;-&gt;&nbsp;float<br>
+&nbsp;<br>
+Performance&nbsp;counter&nbsp;for&nbsp;benchmarking.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>agents</strong> = [[19, 30], [81, 9], [69, 27], [62, 91], [10, 40], [74, 87], [36, 29], [68, 90], [49, 21], [80, 43], [29, 65], [24, 8], [28, 22], [4, 71], [93, 87], [51, 0], [64, 78]]<br>
+<strong>distance</strong> = 79.07591289387686<br>
+<strong>distances</strong> = [94.2019108086455, 82.05485969764375, 21.37755832643195, 10.770329614269007, 63.953107821277925, 91.39474820797966, 117.51595636338071, 61.00819617067857, 79.07591289387686, 20.615528128088304, 31.400636936215164, 82.15229759416349, 22.02271554554524, 42.579337712087536, 73.348483283569, 106.04244433244644, 62.625873247404705, 84.92938243034621, 107.93516572461452, 45.79301256742124, ...]<br>
+<strong>elapsed_time</strong> = 0.12031360000000002<br>
+<strong>i</strong> = 3<br>
+<strong>j</strong> = 16<br>
+<strong>magnitudes_of_agents</strong> = range(2, 18, 5)<br>
+<strong>max_time</strong> = 0.12031360000000002<br>
+<strong>min_time</strong> = 0.004247600000000018<br>
+<strong>num_of_agents</strong> = 17<br>
+<strong>num_of_iterations</strong> = 5<br>
+<strong>t1_start</strong> = 0.56456<br>
+<strong>t1_stop</strong> = 0.6848736<br>
+<strong>times_to_plot</strong> = [[2, 0.004247600000000018], [7, 0.015213500000000046], [12, 0.05814699999999995], [17, 0.12031360000000002]]</td></tr></table>
+</body></html>

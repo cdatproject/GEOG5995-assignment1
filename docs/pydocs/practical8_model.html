@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module practical8_model</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>practical8_model</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cliz%5Cdocuments%5Cpython%5Cgeog5995%5Cpracticals%5Cabm%5Crestart%5Cpracticals---final%5Csubmission%5Cpractical8_model.py">c:\users\liz\documents\python\geog5995\practicals\abm\restart\practicals---final\submission\practical8_model.py</a></font></td></tr></table>
+    <p><tt>Created&nbsp;on&nbsp;&nbsp;oct&nbsp;13&nbsp;17:24:49&nbsp;2019<br>
+&nbsp;<br>
+@author:&nbsp;Liz&nbsp;Osbourn<br>
+This&nbsp;file&nbsp;is&nbsp;covered&nbsp;by&nbsp;the&nbsp;LICENSING&nbsp;file&nbsp;in&nbsp;the&nbsp;root&nbsp;of&nbsp;this&nbsp;project.<br>
+Sets&nbsp;num_of_agents,&nbsp;num_of_agents,&nbsp;neighbourhood,&nbsp;carry_on<br>
+Creates&nbsp;matplotlib&nbsp;figure<br>
+Import&nbsp;in.txt&nbsp;into&nbsp;environment[]&nbsp;to&nbsp;create&nbsp;agent&nbsp;environment<br>
+Creates&nbsp;num_of_agents&nbsp;agents&nbsp;of&nbsp;Agent&nbsp;class&nbsp;using&nbsp;practical8_agentframework.py&nbsp;module<br>
+Agents&nbsp;stored&nbsp;in&nbsp;agents[]<br>
+Defines&nbsp;<a href="#-update">update</a>()&nbsp;for&nbsp;animation<br>
+Agents&nbsp;call&nbsp;eat()&nbsp;move()&nbsp;and&nbsp;share_with_neighbour()&nbsp;each&nbsp;iteration&nbsp;within&nbsp;<a href="#-update">update</a>()&nbsp;and&nbsp;checks&nbsp;carry_on&nbsp;condition<br>
+defines&nbsp;generator&nbsp;function&nbsp;<a href="#-gen_function">gen_function</a>()&nbsp;to&nbsp;use&nbsp;as&nbsp;frames&nbsp;argument&nbsp;in&nbsp;FuncAnimation<br>
+<a href="#-gen_function">gen_function</a>()&nbsp;uses&nbsp;2&nbsp;stopping&nbsp;conditions&nbsp;-&nbsp;carry_on&nbsp;and&nbsp;num_of_iterations<br>
+carry_on&nbsp;set&nbsp;to&nbsp;false&nbsp;when&nbsp;all&nbsp;sheep&nbsp;have&nbsp;eaten&nbsp;at&nbsp;least&nbsp;300<br>
+Plots&nbsp;agents&nbsp;final&nbsp;postion&nbsp;after&nbsp;each&nbsp;iteration&nbsp;in&nbsp;figure1&nbsp;animation</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="csv.html">csv</a><br>
+</td><td width="25%" valign=top><a href="matplotlib.html">matplotlib</a><br>
+</td><td width="25%" valign=top><a href="practical8_agentframework.html">practical8_agentframework</a><br>
+</td><td width="25%" valign=top><a href="random.html">random</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-gen_function"><strong>gen_function</strong></a>(b=[0])</dt></dl>
+ <dl><dt><a name="-update"><strong>update</strong></a>(frame_number)</dt><dd><tt>Define&nbsp;update&nbsp;function&nbsp;for&nbsp;animation&nbsp;display</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>agents</strong> = [&lt;practical8_agentframework.Agent object&gt;, &lt;practical8_agentframework.Agent object&gt;, &lt;practical8_agentframework.Agent object&gt;, &lt;practical8_agentframework.Agent object&gt;, &lt;practical8_agentframework.Agent object&gt;]<br>
+<strong>animation</strong> = &lt;matplotlib.animation.FuncAnimation object&gt;<br>
+<strong>ax</strong> = &lt;matplotlib.axes._axes.Axes object&gt;<br>
+<strong>carry_on</strong> = True<br>
+<strong>environment</strong> = [[210.0, 221.0, 202.0, 223.0, 226.0, 230.0, 234.0, 238.0, 241.0, 241.0, 242.0, 243.0, 243.0, 243.0, 244.0, 244.0, 245.0, 247.0, 249.0, 250.0, ...], [221.0, 192.0, 223.0, 224.0, 227.0, 231.0, 234.0, 238.0, 241.0, 241.0, 242.0, 243.0, 243.0, 243.0, 244.0, 244.0, 245.0, 247.0, 248.0, 249.0, ...], [192.0, 223.0, 203.0, 224.0, 228.0, 232.0, 235.0, 239.0, 241.0, 242.0, 242.0, 243.0, 243.0, 243.0, 244.0, 244.0, 245.0, 246.0, 247.0, 248.0, ...], [223.0, 184.0, 224.0, 225.0, 228.0, 232.0, 235.0, 239.0, 242.0, 242.0, 243.0, 243.0, 243.0, 243.0, 243.0, 244.0, 245.0, 246.0, 246.0, 247.0, ...], [176.0, 227.0, 218.0, 228.0, 221.0, 234.0, 237.0, 240.0, 242.0, 243.0, 243.0, 243.0, 243.0, 243.0, 243.0, 244.0, 244.0, 244.0, 245.0, 245.0, ...], [230.0, 221.0, 232.0, 192.0, 235.0, 237.0, 238.0, 240.0, 242.0, 243.0, 243.0, 243.0, 243.0, 243.0, 243.0, 243.0, 244.0, 244.0, 243.0, 243.0, ...], [193.0, 234.0, 205.0, 236.0, 228.0, 239.0, 229.0, 241.0, 232.0, 242.0, 243.0, 243.0, 243.0, 242.0, 243.0, 243.0, 244.0, 243.0, 243.0, 242.0, ...], [237.0, 218.0, 239.0, 240.0, 241.0, 231.0, 241.0, 231.0, 242.0, 232.0, 243.0, 243.0, 242.0, 242.0, 242.0, 243.0, 243.0, 242.0, 241.0, 241.0, ...], [231.0, 242.0, 242.0, 243.0, 243.0, 243.0, 242.0, 242.0, 232.0, 243.0, 243.0, 243.0, 243.0, 242.0, 242.0, 242.0, 242.0, 241.0, 240.0, 240.0, ...], [242.0, 243.0, 243.0, 244.0, 244.0, 243.0, 243.0, 232.0, 243.0, 233.0, 244.0, 243.0, 243.0, 242.0, 242.0, 242.0, 241.0, 240.0, 239.0, 239.0, ...], [244.0, 244.0, 244.0, 244.0, 244.0, 244.0, 233.0, 243.0, 213.0, 244.0, 244.0, 244.0, 243.0, 242.0, 241.0, 241.0, 240.0, 239.0, 238.0, 238.0, ...], [245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 244.0, 214.0, 244.0, 235.0, 245.0, 244.0, 243.0, 241.0, 240.0, 240.0, 240.0, 238.0, 238.0, 237.0, ...], [245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 244.0, 244.0, 224.0, 245.0, 235.0, 244.0, 242.0, 240.0, 240.0, 240.0, 240.0, 239.0, 238.0, 237.0, ...], [245.0, 245.0, 245.0, 244.0, 244.0, 244.0, 244.0, 244.0, 245.0, 225.0, 245.0, 223.0, 242.0, 230.0, 240.0, 240.0, 240.0, 238.0, 237.0, 235.0, ...], [245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 244.0, 245.0, 245.0, 245.0, 224.0, 243.0, 212.0, 240.0, 240.0, 240.0, 239.0, 237.0, 235.0, 233.0, ...], [245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 243.0, 243.0, 231.0, 240.0, 240.0, 238.0, 235.0, 233.0, 231.0, ...], [245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 243.0, 243.0, 243.0, 242.0, 241.0, 240.0, 237.0, 234.0, 232.0, 230.0, ...], [245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 243.0, 243.0, 243.0, 242.0, 240.0, 239.0, 236.0, 233.0, 231.0, 229.0, ...], [245.0, 245.0, 244.0, 244.0, 244.0, 244.0, 245.0, 245.0, 244.0, 244.0, 243.0, 243.0, 243.0, 241.0, 240.0, 239.0, 236.0, 233.0, 232.0, 230.0, ...], [244.0, 244.0, 244.0, 243.0, 243.0, 243.0, 244.0, 244.0, 244.0, 244.0, 243.0, 243.0, 242.0, 241.0, 239.0, 238.0, 236.0, 233.0, 232.0, 230.0, ...], ...]<br>
+<strong>f</strong> = &lt;_io.TextIOWrapper name='in.txt' mode='r' encoding='cp1252'&gt;<br>
+<strong>fig</strong> = &lt;Figure size 700x700 with 1 Axes&gt;<br>
+<strong>i</strong> = 4<br>
+<strong>neighbourhood</strong> = 20<br>
+<strong>num_of_agents</strong> = 5<br>
+<strong>num_of_iterations</strong> = 10<br>
+<strong>reader</strong> = &lt;_csv.reader object&gt;<br>
+<strong>row</strong> = [238.0, 237.0, 235.0, 233.0, 230.0, 228.0, 227.0, 226.0, 225.0, 224.0, 223.0, 223.0, 223.0, 223.0, 222.0, 222.0, 223.0, 223.0, 223.0, 223.0, ...]<br>
+<strong>rowlist</strong> = [238.0, 227.0, 235.0, 233.0, 230.0, 228.0, 227.0, 226.0, 225.0, 224.0, 223.0, 223.0, 223.0, 223.0, 222.0, 222.0, 223.0, 223.0, 223.0, 223.0, ...]<br>
+<strong>value</strong> = 120.0</td></tr></table>
+</body></html>

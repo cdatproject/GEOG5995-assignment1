@@ -1,0 +1,585 @@
+2019-10-26 16:10:52.735614
+No of agents: 10
+No of iterations: 100
+No of wolves: 2
+No of sheep eaten: 6
+End of model run 
+ 
+ 
+2019-10-26 16:19:15.347263
+No of agents: 10
+No of iterations: 100
+No of wolves: 4
+No of sheep eaten: 8
+End of model run 
+ 
+ 
+2019-10-26 18:40:10.773376
+No of agents: 10
+No of iterations: 100
+No of wolves: 5
+No of sheep eaten: 8
+End of model run 
+ 
+ 
+2019-10-26 18:50:50.416806
+No of agents: 10
+No of iterations: 100
+No of wolves: 0
+No of sheep eaten: 0
+End of model run 
+ 
+ 
+2019-10-26 18:51:27.619012
+No of agents: 10
+No of iterations: 100
+No of wolves: 5
+No of sheep eaten: 8
+End of model run 
+ 
+ 
+2019-10-26 18:51:52.894531
+No of agents: 10
+No of iterations: 100
+No of wolves: 0
+No of sheep eaten: 0
+End of model run 
+ 
+ 
+2019-10-26 18:52:54.559471
+No of agents: 10
+No of iterations: 100
+No of wolves: 2
+No of sheep eaten: 6
+End of model run 
+ 
+ 
+2019-10-26 18:53:23.750031
+No of agents: 10
+No of iterations: 100
+No of wolves: 2
+No of sheep eaten: 5
+End of model run 
+ 
+ 
+2019-10-26 19:03:01.329161
+No of agents: 10
+No of iterations: 100
+No of wolves: 0
+No of sheep eaten: 0
+End of model run 
+ 
+ 
+2019-10-26 19:03:23.497450
+No of agents: 10
+No of iterations: 100
+No of wolves: 0
+No of sheep eaten: 0
+End of model run 
+ 
+ 
+2019-10-26 19:08:47.647555
+No of agents: 20
+No of iterations: 100
+No of wolves: 3
+No of sheep eaten: 9
+End of model run 
+ 
+ 
+2019-10-26 19:10:18.804618
+No of agents: 20
+No of iterations: 100
+No of wolves: 0
+No of sheep eaten: 0
+End of model run 
+ 
+ 
+2019-10-26 19:10:57.861227
+No of agents: 20
+No of iterations: 100
+No of wolves: 1
+No of sheep eaten: 0
+End of model run 
+ 
+ 
+2019-10-26 19:11:57.485178
+No of agents: 20
+No of iterations: 100
+No of wolves: 11
+No of sheep eaten: 5
+End of model run 
+ 
+ 
+2019-10-26 19:12:31.178472
+No of agents: 20
+No of iterations: 100
+No of wolves: 9
+No of sheep eaten: 7
+End of model run 
+ 
+ 
+2019-10-26 19:13:25.681464
+No of agents: 20
+No of iterations: 100
+No of wolves: 1
+No of sheep eaten: 1
+End of model run 
+ 
+ 
+2019-10-26 19:14:23.118785
+No of agents: 20
+No of iterations: 100
+No of wolves: 5
+No of sheep eaten: 2
+End of model run 
+ 
+ 
+2019-10-26 19:14:51.172778
+No of agents: 20
+No of iterations: 100
+No of wolves: 5
+No of sheep eaten: 4
+End of model run 
+ 
+ 
+2019-10-26 19:15:42.138443
+No of agents: 20
+No of iterations: 100
+No of wolves: 5
+No of sheep eaten: 3
+End of model run 
+ 
+ 
+2019-10-26 19:16:10.631960
+No of agents: 20
+No of iterations: 100
+No of wolves: 5
+No of sheep eaten: 2
+End of model run 
+ 
+ 
+2019-10-26 19:16:37.549193
+No of agents: 20
+No of iterations: 100
+No of wolves: 5
+No of sheep eaten: 2
+End of model run 
+ 
+ 
+2019-10-26 19:20:26.667166
+No of agents: 20
+No of iterations: 100
+No of wolves: 5
+No of sheep eaten: 5
+End of model run 
+ 
+ 
+2019-10-26 19:20:54.324538
+No of agents: 20
+No of iterations: 100
+No of wolves: 5
+No of sheep eaten: 5
+End of model run 
+ 
+ 
+2019-10-26 19:21:29.297278
+No of agents: 20
+No of iterations: 100
+No of wolves: 5
+No of sheep eaten: 7
+End of model run 
+ 
+ 
+2019-10-27 11:07:32.477959
+No of agents: 20
+No of iterations: 100
+No of wolves: 5
+No of sheep eaten: 0
+End of model run 
+ 
+ 
+2019-10-29 13:55:06.569939
+No of agents: 20
+No of iterations: 100
+No of wolves: 5
+No of sheep eaten: 4
+End of model run 
+ 
+ 
+2019-10-29 14:59:15.420302
+No of agents: 20
+No of iterations: 100
+No of wolves: 5
+No of sheep eaten: 11
+End of model run 
+ 
+ 
+2019-10-29 15:45:20.245798
+No of agents: 20
+No of iterations: 100
+No of wolves: 6
+No of sheep eaten: 11
+End of model run 
+ 
+ 
+2019-10-29 15:47:36.830501
+No of agents: 10
+No of iterations: 10
+No of wolves: 6
+No of sheep eaten: 4
+End of model run 
+ 
+ 
+2019-10-29 18:01:04.636351
+No of agents: 20
+No of iterations: 100
+No of wolves: 4
+No of sheep eaten: 0
+End of model run 
+ 
+ 
+2019-10-29 18:01:39.319272
+No of agents: 20
+No of iterations: 100
+No of wolves: 2
+No of sheep eaten: 6
+End of model run 
+ 
+ 
+2019-10-29 18:13:42.816718
+No of agents: 20
+No of iterations: 100
+No of wolves: 5
+No of sheep eaten: 9
+End of model run 
+ 
+ 
+2019-10-29 19:42:53.034525
+No of agents: 20
+No of iterations: 100
+No of wolves: 9
+No of sheep eaten: 0
+End of model run 
+ 
+ 
+2019-10-29 19:47:53.891847
+No of agents: 20
+No of iterations: 100
+No of wolves: 4
+No of sheep eaten: 15
+End of model run 
+ 
+ 
+2019-10-29 19:51:19.823875
+No of agents: 20
+No of iterations: 100
+No of wolves: 10
+No of sheep eaten: 20
+End of model run 
+ 
+ 
+2019-10-29 19:55:34.679241
+No of agents: 20
+No of iterations: 100
+No of wolves: 5
+No of sheep eaten: 10
+End of model run 
+ 
+ 
+2019-10-29 19:55:57.770156
+No of agents: 20
+No of iterations: 100
+No of wolves: 3
+No of sheep eaten: 7
+End of model run 
+ 
+ 
+2019-10-29 19:57:30.622911
+No of agents: 20
+No of iterations: 100
+No of wolves: 2
+No of sheep eaten: 0
+End of model run 
+ 
+ 
+2019-10-29 19:59:00.852395
+No of agents: 20
+No of iterations: 100
+No of wolves: 5
+No of sheep eaten: 11
+End of model run 
+ 
+ 
+2019-10-29 20:10:46.187111
+No of agents: 101
+No of iterations: 5
+No of wolves: 17
+No of sheep eaten: 24
+End of model run 
+ 
+ 
+2019-10-29 20:11:19.303659
+No of agents: 150
+No of iterations: 5
+No of wolves: 13
+No of sheep eaten: 9
+End of model run 
+ 
+ 
+2019-10-29 20:11:49.939904
+No of agents: 150
+No of iterations: 5
+No of wolves: 16
+No of sheep eaten: 24
+End of model run 
+ 
+ 
+2019-10-29 20:26:27.579156
+No of agents: 150
+No of iterations: 5
+No of wolves: 12
+No of sheep eaten: 15
+End of model run 
+ 
+ 
+2019-10-29 20:26:56.868518
+No of agents: 15
+No of iterations: 50
+No of wolves: 0
+No of sheep eaten: 0
+End of model run 
+ 
+ 
+2019-10-29 20:27:18.064767
+No of agents: 15
+No of iterations: 50
+No of wolves: 0
+No of sheep eaten: 0
+End of model run 
+ 
+ 
+2019-10-29 20:30:39.348039
+No of agents: 25
+No of iterations: 50
+No of wolves: 6
+No of sheep eaten: 8
+End of model run 
+ 
+ 
+2019-10-29 21:19:13.630772
+No of agents: 25
+No of iterations: 50
+No of wolves: 0
+No of sheep eaten: 0
+End of model run 
+ 
+ 
+2019-10-29 21:19:52.050374
+No of agents: 25
+No of iterations: 50
+No of wolves: 4
+No of sheep eaten: 14
+End of model run 
+ 
+ 
+2019-10-29 21:40:51.535166
+No of agents: 25
+No of iterations: 50
+No of wolves: 1
+No of sheep eaten: 0
+End of model run 
+ 
+ 
+2019-10-29 21:46:19.969307
+No of agents: 25
+No of iterations: 2
+No of wolves: 0
+No of sheep eaten: 0
+End of model run 
+ 
+ 
+2019-10-29 21:54:55.939528
+No of agents: 25
+No of iterations: 2
+No of wolves: 4
+No of sheep eaten: 0
+End of model run 
+ 
+ 
+2019-10-29 21:56:02.136586
+No of agents: 25
+No of iterations: 2
+No of wolves: 5
+No of sheep eaten: 2
+End of model run 
+ 
+ 
+2019-10-29 21:57:01.283244
+No of agents: 25
+No of iterations: 2
+No of wolves: 3
+No of sheep eaten: 0
+End of model run 
+ 
+ 
+2019-10-29 22:06:19.887574
+No of agents: 25
+No of iterations: 2
+No of wolves: 2
+No of sheep eaten: 0
+End of model run 
+ 
+ 
+2019-10-29 22:18:54.371935
+No of agents: 25
+No of iterations: 2
+No of wolves: 2
+No of sheep eaten: 0
+No of sheep full: 3
+End of model run 
+ 
+ 
+2019-10-29 22:25:40.461194
+No of agents: 5
+No of iterations: 2
+No of wolves: 2
+No of sheep eaten: 1
+No of sheep full: 2
+End of model run 
+ 
+ 
+2019-10-29 22:38:20.235390
+No of agents: 1
+No of iterations: 2
+No of wolves: 1
+No of sheep eaten: 0
+No of sheep full: 0
+End of model run 
+ 
+ 
+2019-10-29 22:39:55.723311
+No of agents: 1
+No of iterations: 3
+No of wolves: 0
+No of sheep eaten: 0
+No of sheep full: 1
+End of model run 
+ 
+ 
+2019-10-29 22:42:46.785879
+No of sheep: 3
+No of iterations: 3
+No of wolves: 2
+No of sheep eaten: 0
+No of sheep full: 3
+End of model run 
+ 
+ 
+2019-10-29 22:44:44.135257
+No of sheep: 25
+No of iterations: 2
+No of wolves: 5
+No of sheep eaten: 2
+No of sheep full: 0
+End of model run 
+ 
+ 
+2019-10-29 22:49:14.503692
+No of sheep: 25
+No of iterations: 3
+No of wolves: 4
+No of sheep eaten: 0
+No of sheep full: 0
+End of model run 
+ 
+ 
+2019-10-29 22:49:37.009476
+No of sheep: 25
+No of iterations: 3
+No of wolves: 3
+No of sheep eaten: 0
+No of sheep full: 0
+End of model run 
+ 
+ 
+2019-10-29 22:58:06.359823
+No of sheep: 25
+No of iterations: 3
+No of wolves: 0
+No of sheep eaten: 0
+No of sheep full: 3
+End of model run 
+ 
+ 
+2019-10-29 23:01:29.121856
+No of sheep: 1
+No of iterations: 3
+No of wolves: 0
+No of sheep eaten: 0
+No of sheep full: 1
+End of model run 
+ 
+ 
+2019-10-29 23:03:35.432555
+No of sheep: 2
+No of iterations: 3
+No of wolves: 0
+No of sheep eaten: 0
+No of sheep full: 2
+End of model run 
+ 
+ 
+2019-10-29 23:04:25.568525
+No of sheep: 3
+No of iterations: 3
+No of wolves: 1
+No of sheep eaten: 0
+No of sheep full: 3
+End of model run 
+ 
+ 
+2019-10-29 23:05:18.582840
+No of sheep: 10
+No of iterations: 3
+No of wolves: 1
+No of sheep eaten: 0
+No of sheep full: 7
+End of model run 
+ 
+ 
+2019-10-29 23:09:31.128608
+No of sheep: 10
+No of iterations: 10
+No of wolves: 1
+No of sheep eaten: 1
+No of sheep full: 9
+End of model run 
+ 
+ 
+2019-10-29 23:16:33.515916
+No of sheep: 10
+No of iterations: 4
+No of wolves: 3
+No of sheep eaten: 0
+No of sheep full: 10
+End of model run 
+ 
+ 
+2019-10-29 23:17:39.029011
+No of sheep: 10
+No of iterations: 10
+No of wolves: 3
+No of sheep eaten: 0
+No of sheep full: 10
+End of model run 
+ 
+ 
+2019-10-29 23:19:40.791413
+No of sheep: 10
+No of iterations: 10
+No of wolves: 10
+No of sheep eaten: 1
+No of sheep full: 9
+End of model run 
+ 
+ 
