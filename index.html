@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+
+<html lang="en-GB">
+
+<head>
+<meta charset="UTF-8">
+  
+  <meta name="author" content="Liz Osbourn">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<TITLE>
+Liz Osbourn
+</TITLE>
+
+
+
+
+<style>
+
+p    {color: black;background: white;}
+h1   {color: black; background: white;}
+h2   {color: black;background: white;}
+
+.navbar {
+  overflow: hidden;
+  background-color: rgb(220,20,60);
+}
+
+.navbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: gray;
+}
+
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="liz.html">About me</a>
+  <a href="contact.html">Contact</a>
+  
+  
+	<div class = "dropdown">
+    <button class="dropbtn">Projects 
+      <i class="fa fa-caret-down"></i>
+    </button>
+		<div class="dropdown-content">
+		<a href="geog5995.html">GEOG5995</a>
+		
+		<a href="phd.html">PhD research</a>
+		</div> 
+	</div>
+</div>
+
+<div style="padding-left:16px">
+  
+  <h1>Liz Osbourn</h1>
+  <p></p>
+  <h2>What's new: </h2>
+  
+  <h3><span style="text-decoration: underline;">Agent based modelling</span></h3>
+  <span font-size: 5em; color = "red">
+  <a href="https://github.com/cdatproject/GEOG5995-assignment1">Please click here for the GEOG5995 code submission</a><br><br><br>
+  </span>
+  <a href="geog5995.html">Please click here for further details and the development stages of GEOG5995 code:</a>
+  
+</div>
+
+<div style="padding-left:16px">
+	The sheep grazing and wolf eating agent based model: <br><br>
+	<figure>
+		<img src="sheep-wolf-model.jpg" alt="snapshot of ageny based model" width="340" height="426" align="left"/>
+		This is a <b>Python</b> model running in a GUI.<br>
+		It contains agents(sheep) grazing an environment and second agents(wolves) chasing
+		and eating the sheep. The environment is read in from a 2 dimensional 300x300 raster file 
+		and the sheeps(y,x) coordinates are scraped from a web page in the range 0-100(previous versions
+		of the model in the submission folder show how these can be generated randomly instead). The sheep move, eat and interact with each
+		sharing their food if they are less than "neighbourhood"(input argument) units apart. The wolves traverse the slope and will eat up to 3 sheep 
+		every 24 iterations if the sheep are close enough (&lt;10 units). The model can be 
+		run for a chosen number of iterations and sheep and "neighbourhood" distance. The number 
+		of wolves is randomly generated from a range dependent on the number of sheep<br><br>
+		3 arguments need to be defined when running the model - number of iterations, number of sheep and the distance within which the 
+		sheep share food eg <strong>eg  python sheep_wolf_model.py 10 10 10 </strong>
+		<b>Running the model (sheep_wolf_model.py)</b> opens 2 windows ("Figure 1" and "Sheep"). <strong>Both windows must be left open.</strong> In the "Sheep" window select "Run model" 
+		from the "Model" dropdown menu to run
+		the model. Select "END" from the "Model" dropdown menu when you are finished. A message will pop up saying how many sheep have been eaten
+		 and the print output will tell you how many wolves there were .
+		An output file called model_data.txt is appended to for each run and will list the time it ran,
+		number of agents, number of iterations, number of wolves, number of sheep eaten and the amount eaten by the remaining sheep.
+		<br>
+		<i>Note:</i> <br>
+		If running the model from Spyder ensure Tkinter is selected from the "Graphics backend" dropdown list
+		in the graphics tab in Tools>Preferences>IPython console>
+		<b>For detailed information read the README.txt file in the submission folder</b>
+		<br><br><br>
+		<b><small><i>Above: snapshot of gui</i></small></b>
+		<br>
+		
+	</figure>
+		 
+	
+	
+</div>
+</body>
+</html>
+
+<!--In creating the webpage I used lessons from https://www.w3schools.com and ideas from www.quackit.com 
+to help with thr dropdown menus.-->
