@@ -23,7 +23,7 @@ To run from within an IDE such as Sypder comment out the sys.argv lines 53-68 an
 
 Variables you may wish to adjust within sheep_wolf_model.py are:
 full_belly - stopping condition. Once all sheeps stores are equal or greater than this amount the model stops.
-no_of_wolves - number of wolves in the model.
+no_of_wolves - number of wolves in the model. If all sheep are eaten the model will run the full number of iterations.
 
 This is an agent based Python model running in a GUI containing two classes - Agents and Wolves.
 The Agents represent sheep grazing an environment which is representing an outdoor landscape and the second 
