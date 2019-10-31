@@ -66,7 +66,7 @@ A message will pop up saying how many sheep have been eaten and the print output
 there were. 
 
 OUTPUT files
-NOTE 1: these files will only be written if the GUI window is closed using END from the dropdown menu
+NOTE 1: these files will only be written if the GUI window is closed using END from the dropdown menu, followed by manually closing the Tkinter window
 
 model_data.txt  - is appended to for each run and will list the time it ran, number 
 of agents, number of iterations, number of wolves, number of sheep eaten and whether the sheep full stopping conditions was
