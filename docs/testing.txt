@@ -1,0 +1,61 @@
+List of some of the main tests run:
+
+move()
+- printed out agents y,x before and after moving
+
+eat()
+- printed out agents store before and after eating
+
+web scraping
+-Printed out td_xs and td_ys to ensure data scraped correctly from data.html
+- compare to data.html
+
+sharing()
+-set environment low to ensure sharing
+- Printed the x and y value of the 2 agents, their store values before and after
+- checked distance within neighbourhood and that stores were both average of the 2 stores
+
+stopping condition
+-set stopping condition low to make sure it applied before number of iterations were reached.
+-Check agents_stores (in agents_stores.txt) to ensure no stores go over stopping condition
+- print hour feature to see how many iterations have occurred
+- for low numbers of iterations, it is obvious how many iterations have passed from store amount (approx multiple of 10)
+
+Wolves behaviour
+- Fix number of wolves to ensure always enough to chase agent
+- Change distance wolves attack agent
+	- print x, y coordinates of agent and wolf 
+	- print "wolf eats sheep"
+	- print number of agents left
+	 -print wolfs new (x,y)
+-to check traverse printed wolf's coordinate before and after moving
+
+Hour count
+- set number of iterations to be several times bigger than 24
+- printed out hour count as it looped through and the sheep_eaten variables
+- checked sheep_eaten reset to 0 for each 24 iterations
+
+distance_between
+-printed 2 agents (y,x) and calculated distance to ensure correct distance returned
+
+property()
+- modified getter and setter one at a time to add amounts on to x and y (eg 500)
+- created an agent and assigned a variable
+- ran get and set on agent.x and agent.y and returned results
+- selected just that part of code to run, and see how changes in getter and setter change whilst agent.y and and agent.x remain constant 
+
+
+General
+-Ran model with 0, -1 agents
+-Ran model with 0, -1 iterations
+-Entered too little/many arguments, or of wrong type when running model 
+
+Visually
+- If set high numbers of iterations can see environment getting darker as sheep moves
+- can see the wolves eating the sheep if they are close (but not always if they are full)
+- can see the wolves traversing the environment
+- can see the boundary effect solution worked
+- check output is as expected in the 3 output files
+
+note: on one computer notepad was not recognising the \n in model_data.txt output
+and outputting the result on one line. On that computer output displayed correctly in notepad ++ 

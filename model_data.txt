@@ -1,9 +1,0 @@
-2019-10-31 13:35:17.770206
-No of sheep: 10
-No of iterations: 10
-No of wolves: 10
-No of sheep eaten: 2
-No of sheep full: 8
-End of model run 
- 
- 
