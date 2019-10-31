@@ -67,6 +67,7 @@ there were.
 
 OUTPUT files
 NOTE 1: these files will only be written if the GUI window is closed using END from the dropdown menu, followed by manually closing the Tkinter window
+NOTE 2: on some installations the \n is not recognised in notepad. If this is the case use notepad ++ to view the file
 
 model_data.txt  - is appended to for each run and will list the time it ran, number 
 of agents, number of iterations, number of wolves, number of sheep eaten and whether the sheep full stopping conditions was
@@ -77,7 +78,7 @@ clearing it each time it runs.
 
 environment_eaten.txt - this contains the environment after the model has been run
 
-NOTE 2: If running the model from Spyder ensure Tkinter is selected from the "Graphics backend" dropdown list in the 
+NOTE 3: If running the model from Spyder ensure Tkinter is selected from the "Graphics backend" dropdown list in the 
 graphics tab in Tools>Preferences>IPython console> 
 
 practical1_model.py  -		Makes 2 agents
