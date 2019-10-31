@@ -8,14 +8,14 @@ Creates Agent and Wolf classes.
 Both have (y,x) coordinates in the 300x300 environment imported from the raster data in.txt
 Agent class
 agent's  _y and _x scraped from web data in [0,100], else assigned in [0,300] if data missing
-Defines move() and eat(), distance_between(), share with neighbour() methods of Agent
+Defines move() and eat(), distance_between(), share with neighbours() methods of Agent
 Eats 10 if environment >10, eats remainder if environment<10
 Agent's y and x move randomly +-1, torus solution to deal with boundary effects
 Overwrites __str__(self) to display coordinates and store
 In Wolf class:
 Randomly assigned (y,x) co ordinates, y in [0,100], x in [0,300]
 Defines chase() and traverse()
-Wolf chases if y and x coordinates <10 units apart and sheep_eaten <3
+Wolf deletes agent if y and x coordinates <10 units apart and sheep_eaten <3
 Overwrites __str__(self) to display coordinates and sheep_eaten
 Both classes protect y and x coordinates using _y and _x
 Sets getter, setter and del  of _y and _x with property()
@@ -183,7 +183,7 @@ class Wolf():
     wolf given random coordinates, y in [0,100] and x in [0,300]
     sheep_eaten attribute set to 0
     """
-    def __init__(self, sheep, _y, _x):
+    def __init__(self, sheep):
         self._x = random.randint(0,300)
         self._y = random.randint(0,100)
         #self._x = 50
@@ -193,7 +193,9 @@ class Wolf():
         
      
     def traverse(self):
-        """wolf randomly traverses +/-3 along x axis direction """
+        """
+        wolf randomly traverses +/-3 along x axis direction 
+        """
         if random.random() < 0.5:
             self._x = (self._x + 3) % 300
         else:
@@ -220,7 +222,7 @@ class Wolf():
                         self._x = sheep_i._x
                         sheep.remove(sheep_i)
                         print("sheep(y,x): ", sheep_i._y, sheep_i._x)
-                        
+                        print("After chasing, wolf(y,x): ", self._y, self._x)
                         print("Number of sheep left: ",len(sheep))
                         total_sheep_eaten[0] +=1
                         self.sheep_eaten +=1
@@ -229,7 +231,7 @@ class Wolf():
     
 # =============================================================================
 # override __str__(self) in the agents,  so that they
-#  display this information information about their location and stores when printed? 
+#  display this information information about their location and sheep eaten 
 # =============================================================================
     def __str__(self):
         return "wolf-_x: {0}, wolf-_y: {1}, sheep_eaten: {2}".format(self._x, self._y, self.sheep_eaten)

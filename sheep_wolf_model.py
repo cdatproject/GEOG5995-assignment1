@@ -13,14 +13,17 @@ Creates num_of_agents agents of Agent class using sheep_wolf_agentframework.py m
 agent y, x coordinates are scraped from data.html and are in [0,100]
 Agents stored in agents[]
 Defines update() for animation display
-Wolves traverse() the environment and call chase()
-Wolves chase sheep if they are closer than 10 units and they have eaten less than 3 in the 24 iteration period
-Agents call eat() move() and share_with_neighbour() each iteration within update() and checks carry_on condition
+Wolves chase() - deleting agents closer than 10 units if they have eaten less than 3 in the 24 iteration period
+wolf position plotted with X then wolves traverse()
+Agents call eat() move() and share_with_neighbours() each iteration within update() and checks carry_on condition
 Defines generator function gen_function() to use as frames argument in FuncAnimation
 Gen_function() uses 2 stopping conditions - carry_on and num_of_iterations
-Carry_on set to false when all sheep have eaten at least 300
+Carry_on set to false when all agent's stores = full_belly
 Plots agents final postion after each iteration in figure1 animation
 Select "END" from the "Model" dropdown menu to close the GUI
+Environment written out to environment_eaten.txt at the end
+Agents store totals appended on one line to agents_stores.txt
+Model data written to model_data.txt
 """
 # =============================================================================
 # 
@@ -38,7 +41,7 @@ matplotlib.use('TkAgg')
 import matplotlib.pyplot
 import tkinter
 from tkinter import messagebox
-#import practical9_agentframework
+#import os #only needed for os.exit(1) in finish()
 import sheep_wolf_agentframework
 import csv
 import random # needed for shuffling the agents
@@ -46,49 +49,60 @@ import matplotlib.animation #for animation practical
 import requests
 import bs4
 from datetime import datetime # datetime object containing current date and time
-import sys
+import sys 
 """
 set sys.argv arguments and exit if incorrect number entered
 """
 sys.argv[0] = "sheep_wolf__modelargtest.py"
-#num_of_agents = int(sys.argv[1])
-#num_of_iterations  = int(sys.argv[2])
-#neighbourhood = int(sys.argv[3])
-#count = len(sys.argv[1:])
-#if count !=3:
+num_of_agents = int(sys.argv[1])
+num_of_iterations  = int(sys.argv[2])
+neighbourhood = int(sys.argv[3])
+count = len(sys.argv[1:])
+if count !=3:
 
-#   print("Incorrect number of arguments (expecting 3):  exiting")
-#   exit()
-#   print("incorrect number of arguments entered. Using default values")
+   print("Incorrect number of arguments (expecting 3):  exiting")
+   exit()
+   print("incorrect number of arguments entered. Using default values")
 
 
 #catching exceptions. Won't run if not an integer or not enough arguments
 
+# not used if running from command line=============================================================================
+# """
+# set number of agents
+# 
+# set number of iterations
+# set neighbourhood
+# """
+# =============================================================================
 """
-set number of agents
-
-set number or iterations
 Create empty agent container
+
 Create empty environment container
 initalise stopping condition
 Create empty wolf container
 Set number of wolves
 Set total_sheep_eaten to 0
+set hour count to 0
+set sheep_full to 0
+set full_belly to 0
 """
 
-num_of_agents = 10
-num_of_iterations = 10
+#num_of_agents = 5
+#num_of_iterations = 5
 agents = []
 environment = []
-neighbourhood = 20
-carry_on = True	 #used for stopping condition
+#neighbourhood = 20
+global carry_on	 #used for stopping condition
+carry_on = True
 wolves = []
-no_of_wolves = 10 #use if want to keep wolves constant for testing
-#no_of_wolves = random.randint(0,(round(num_of_agents/5)+1))
+#no_of_wolves = 1 #use if want to keep wolves constant for testing
+no_of_wolves = random.randint(0,(round(num_of_agents/5)+1))
 total_sheep_eaten = [0]
 hour_count = 0 # used for resetting wolves hunger every 24 iterations
 #global sheep_full
-sheep_full=0
+sheep_full=0  #used to determine value of carry_on stopping condition
+full_belly=200 # used to determine value of carry_on stopping condition
 """
 Set up the environment using in.txt
 """
@@ -103,6 +117,10 @@ for row in reader:
     environment.append(rowlist)
 f.close()
 
+# =============================================================================
+# This builds the main window ("root"); sets its title
+# =============================================================================
+
 root = tkinter.Tk() 
 root.wm_title("Sheep")
 #data.html only contains y and x in [0,100] so to get full
@@ -116,8 +134,8 @@ content = r.text
 soup = bs4.BeautifulSoup(content, 'html.parser')
 td_ys = soup.find_all(attrs={"class" : "y"})
 td_xs = soup.find_all(attrs={"class" : "x"})
-#print(td_ys) - used for checking
-#print(td_xs) - used for checking
+#print(td_ys) - used for checking code
+#print(td_xs) - used for checking code
 
 
 #Make the agents.
@@ -136,9 +154,12 @@ for i in range(num_of_agents):
 create wolves
 """
 for i in range(no_of_wolves):
-    wolves.append(sheep_wolf_agentframework.Wolf(agents, _y, _x))
+    wolves.append(sheep_wolf_agentframework.Wolf(agents))
 
-
+# =============================================================================
+# # lays out a matplotlib canvas embedded within our window and associated
+# #  with fig, our matplotlib figure. 
+# =============================================================================
 
 
 fig = matplotlib.pyplot.figure(figsize=(7, 7))
@@ -174,8 +195,8 @@ def update(frame_number):
 #        print("before traverse",wolves[i]._x,wolves[i]._y )
         wolves[i].traverse()
 #        print("after traverse",wolves[i]._x,wolves[i]._y )
-        print("hour count: ", hour_count)
-        if hour_count%24 == 0:
+#        print("hour count: ", hour_count) checks hour_count
+        if hour_count%24 == 0: # to reset hour_counter every 24 iterations
             print("no of sheep wolf has eaten: ", wolves[i].sheep_eaten)
             print("wolf is hungry again")
             wolves[i].sheep_eaten = 0
@@ -207,21 +228,17 @@ def update(frame_number):
 #     for agent in agents:    
 #         
 # =============================================================================
-        print("sheep full", sheep_full)
-        #if agents[i].store >= 30:     #stops when all sheep have eaten at last 30
-        if agent.store >= 30:    
+        #print("sheep full", sheep_full)
+        #if agents[i].store >= full_belly:     #stops when all sheep have eaten at last 30
+        if agent.store >= full_belly:    
             sheep_full += 1
-            print("sheep_full after checking store:", sheep_full)
-        if sheep_full == num_of_agents:    
+           # print("sheep_full after checking store:", sheep_full)
+        if sheep_full == len(agents):    
             carry_on = False
             print("stopping condition")
+            print("Full belly: ", full_belly)
+#plot the agents final position after eating and moving
 
-#plot the agents final position after eating and moving"""
-
-
-        #matplotlib.pyplot.xlim(0, 300)
-        #matplotlib.pyplot.ylim(300, 0)
-        #matplotlib.pyplot.imshow(environment)
     #for i in range(num_of_agents):         #removed to allow removing agents
     for agent in agents:    
         #matplotlib.pyplot.scatter(agents[i]._x,agents[i]._y)
@@ -238,7 +255,7 @@ def gen_function(b = [0]): # limits code to nopt running more than num of iterat
         a = a + 1
 
 # =============================================================================
-# add a function that will run our model. We'll connect this to our menu 
+# adds a function that will run model. This is connected to the menu 
 # such that when the menu is clicked, this function will run, in line with 
 # the event based programming model
 # 
@@ -254,7 +271,8 @@ def run():
                                         repeat=False, frames=gen_function)
     canvas.draw()#replaced canvas.show with canvas.draw
     #canvas.show()
-    print("canvas drawn")
+    #needed instead of matplotlib.pyplot.show()
+    #print("canvas drawn") #testing run order of model
     
     
 """
@@ -264,15 +282,22 @@ def finish():
     """
     Closes winows, notifies how many sheep killed and prints number of wolves
     """
+    matplotlib.pyplot.close(fig)#moved to here
     print("no of wolves:", no_of_wolves)
+    root.quit() # testing
     root.destroy()
-    matplotlib.pyplot.close(fig)
+#    matplotlib.pyplot.close(fig)
+#    exit() # test
     messagebox.showwarning("Warning", str(total_sheep_eaten[0])+" sheep eaten")
+    #os._exit(1) prevents files being written at end but prevents exception error
     # =============================================================================
 # a second file: agents_stores.txt that writes out the total amount stored by 
 # each of the agents on a line. Appends the data to the file, rather than
 # clearing it each time it runs. This writes out the store value for each agent
 # =============================================================================
+    """
+    append each agents store value to agents_stores.txt on one line
+    """
     agents_stores = open("agents_stores.txt", 'a', newline="")
     agents_store_line = []
     for agent in agents:
@@ -281,6 +306,20 @@ def finish():
     w.writerow(agents_store_line)
     agents_stores.close()
     
+# =============================================================================
+#   Writes out the environment as a file at the end
+# =============================================================================
+    """
+    write environment after model has run to environment_eaten.txt
+    """
+    environment_eaten = open("environment_eaten.txt", 'w', newline="")
+    w = csv.writer(environment_eaten, delimiter=',')
+    for line in environment:
+        w.writerow(line)
+    environment_eaten.close()    
+    """
+    append model data to model_data.txt
+    """
     model_data = open("model_data.txt", 'a', newline="")
     model_data.write(str(datetime.now()))
     model_data.write("\nNo of sheep: ")
@@ -288,27 +327,25 @@ def finish():
     model_data.write("\nNo of iterations: "+ str(num_of_iterations))
     model_data.write("\nNo of wolves: " + str(no_of_wolves))
     model_data.write("\nNo of sheep eaten: " + str(total_sheep_eaten[0]))
-    model_data.write("\nNo of sheep full: " + str(sheep_full))
+    model_data.write("\nNo of alive sheep full: " + str(sheep_full))
+    model_data.write("\nCarry on stopping condition (all sheep full) applied \nbefore number of iterations reached: "
+     + str(not(carry_on)))
     model_data.write("\nEnd of model run \n \n \n")
     model_data.close()
-    exit()
-# =============================================================================
-# This builds the main window ("root"); sets its title, then creates and 
-# lays out a matplotlib canvas embedded within our window and associated
-#  with fig, our matplotlib figure. 
-# =============================================================================
+
+#note gui needs to be exited using the drop down menu and selecting END
+#for these files to be written
 
 
 
-#root = tkinter.Tk() 
-#root.wm_title("Sheep")
+
 canvas = matplotlib.backends.backend_tkagg.FigureCanvasTkAgg(fig, master=root)
 #canvas = FigureCanvasTkAgg(fig, master=root)  # A tk.DrawingArea.
 canvas._tkcanvas.pack(side=tkinter.TOP, fill=tkinter.BOTH, expand=1) 
 
 
 
-# Just showing menu elements
+#just showing menu elements
 
 menu_bar = tkinter.Menu(root)
 root.config(menu=menu_bar)
@@ -317,12 +354,12 @@ menu_bar.add_cascade(label="Model", menu=model_menu)
 model_menu.add_command(label="Run model", command=run)
 model_menu.add_command(label="END", command=finish)
 tkinter.mainloop()  # replaced tkinter.mainloop() with root.mainloop()
-#root.destroy() # remove once working
-
+# =============================================================================
+# root.quit() # used in testing to get rid of sytemexit exception whne running pydoc
+# root.destroy() # 
+# sys.exit()
+# =============================================================================
 #Uses Tkinter - if running in Spyder set "Graphics" to Tkinter
-
-
-
 
 
 #testing each agent has list of agents. 
@@ -330,11 +367,5 @@ tkinter.mainloop()  # replaced tkinter.mainloop() with root.mainloop()
 
 
 
-
-
-#animation = matplotlib.animation.FuncAnimation(fig, update, interval=1)
-#animation = matplotlib.animation.FuncAnimation(fig, update, interval=1,
- #                                       repeat=False, frames=gen_function)
-#matplotlib.pyplot.show() #replaced by canvas.show()
 
 

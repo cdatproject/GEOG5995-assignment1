@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module sheep_wolf_modelpd</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>sheep_wolf_modelpd</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cliz%5Cdocuments%5Cpython%5Cgeog5995%5Cpracticals%5Cabm%5Crestart%5Cpracticals---final%5Csubmission%5Csheep_wolf_modelpd.py">c:\users\liz\documents\python\geog5995\practicals\abm\restart\practicals---final\submission\sheep_wolf_modelpd.py</a></font></td></tr></table>
+    <p><tt>__version__&nbsp;&nbsp;1.0.0<br>
+&nbsp;<br>
+Created&nbsp;on&nbsp;&nbsp;oct&nbsp;13&nbsp;17:24:49&nbsp;2019<br>
+@author:&nbsp;Liz&nbsp;Osbourn<br>
+This&nbsp;file&nbsp;is&nbsp;covered&nbsp;by&nbsp;the&nbsp;LICENSING&nbsp;file&nbsp;in&nbsp;the&nbsp;root&nbsp;of&nbsp;this&nbsp;project.<br>
+This&nbsp;runs&nbsp;in&nbsp;a&nbsp;GUI&nbsp;and&nbsp;opens&nbsp;2&nbsp;windows&nbsp;("Figure&nbsp;1"&nbsp;and&nbsp;"Sheep").<br>
+Both&nbsp;windows&nbsp;must&nbsp;be&nbsp;left&nbsp;open.&nbsp;<br>
+In&nbsp;the&nbsp;"Sheep"&nbsp;window&nbsp;select&nbsp;"Run&nbsp;model"&nbsp;from&nbsp;the&nbsp;"Model"&nbsp;dropdown&nbsp;menu&nbsp;to&nbsp;run&nbsp;the&nbsp;model.&nbsp;<br>
+sys.argv&nbsp;Variables&nbsp;to&nbsp;set&nbsp;are&nbsp;num_of_agents,&nbsp;num_of_iterations,&nbsp;neighbourhood<br>
+Imports&nbsp;in.txt&nbsp;into&nbsp;environment[]&nbsp;to&nbsp;create&nbsp;agent&nbsp;environment<br>
+Creates&nbsp;num_of_agents&nbsp;agents&nbsp;of&nbsp;Agent&nbsp;class&nbsp;using&nbsp;sheep_wolf_agentframework.py&nbsp;module<br>
+agent&nbsp;y,&nbsp;x&nbsp;coordinates&nbsp;are&nbsp;scraped&nbsp;from&nbsp;data.html&nbsp;and&nbsp;are&nbsp;in&nbsp;[0,100]<br>
+Agents&nbsp;stored&nbsp;in&nbsp;agents[]<br>
+Defines&nbsp;<a href="#-update">update</a>()&nbsp;for&nbsp;animation&nbsp;display<br>
+Wolves&nbsp;chase()&nbsp;-&nbsp;deleting&nbsp;agents&nbsp;closer&nbsp;than&nbsp;10&nbsp;units&nbsp;if&nbsp;they&nbsp;have&nbsp;eaten&nbsp;less&nbsp;than&nbsp;3&nbsp;in&nbsp;the&nbsp;24&nbsp;iteration&nbsp;period<br>
+wolf&nbsp;position&nbsp;plotted&nbsp;with&nbsp;X&nbsp;then&nbsp;wolves&nbsp;traverse()<br>
+Agents&nbsp;call&nbsp;eat()&nbsp;move()&nbsp;and&nbsp;share_with_neighbours()&nbsp;each&nbsp;iteration&nbsp;within&nbsp;<a href="#-update">update</a>()&nbsp;and&nbsp;checks&nbsp;carry_on&nbsp;condition<br>
+Defines&nbsp;generator&nbsp;function&nbsp;<a href="#-gen_function">gen_function</a>()&nbsp;to&nbsp;use&nbsp;as&nbsp;frames&nbsp;argument&nbsp;in&nbsp;FuncAnimation<br>
+Gen_function()&nbsp;uses&nbsp;2&nbsp;stopping&nbsp;conditions&nbsp;-&nbsp;carry_on&nbsp;and&nbsp;num_of_iterations<br>
+Carry_on&nbsp;set&nbsp;to&nbsp;false&nbsp;when&nbsp;all&nbsp;agent's&nbsp;stores&nbsp;=&nbsp;full_belly<br>
+Plots&nbsp;agents&nbsp;final&nbsp;postion&nbsp;after&nbsp;each&nbsp;iteration&nbsp;in&nbsp;figure1&nbsp;animation<br>
+Select&nbsp;"END"&nbsp;from&nbsp;the&nbsp;"Model"&nbsp;dropdown&nbsp;menu&nbsp;to&nbsp;close&nbsp;the&nbsp;GUI<br>
+Environment&nbsp;written&nbsp;out&nbsp;to&nbsp;environment_eaten.txt&nbsp;at&nbsp;the&nbsp;end<br>
+Agents&nbsp;store&nbsp;totals&nbsp;appended&nbsp;on&nbsp;one&nbsp;line&nbsp;to&nbsp;agents_stores.txt<br>
+Model&nbsp;data&nbsp;written&nbsp;to&nbsp;model_data.txt</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="bs4.html">bs4</a><br>
+<a href="csv.html">csv</a><br>
+<a href="matplotlib.html">matplotlib</a><br>
+</td><td width="25%" valign=top><a href="tkinter.messagebox.html">tkinter.messagebox</a><br>
+<a href="os.html">os</a><br>
+<a href="random.html">random</a><br>
+</td><td width="25%" valign=top><a href="requests.html">requests</a><br>
+<a href="sheep_wolf_agentframework.html">sheep_wolf_agentframework</a><br>
+<a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top><a href="tkinter.html">tkinter</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-finish"><strong>finish</strong></a>()</dt><dd><tt>Closes&nbsp;winows,&nbsp;notifies&nbsp;how&nbsp;many&nbsp;sheep&nbsp;killed&nbsp;and&nbsp;prints&nbsp;number&nbsp;of&nbsp;wolves</tt></dd></dl>
+ <dl><dt><a name="-gen_function"><strong>gen_function</strong></a>(b=[0])</dt><dd><tt>Defines&nbsp;stopping&nbsp;condition&nbsp;dependent&nbsp;on&nbsp;defined&nbsp;number&nbsp;of&nbsp;iterations&nbsp;and&nbsp;carry_on</tt></dd></dl>
+ <dl><dt><a name="-run"><strong>run</strong></a>()</dt><dd><tt>Runs&nbsp;the&nbsp;animation&nbsp;displaying&nbsp;sheep&nbsp;and&nbsp;wolves&nbsp;for&nbsp;each&nbsp;iteration</tt></dd></dl>
+ <dl><dt><a name="-update"><strong>update</strong></a>(frame_number)</dt><dd><tt>Updates&nbsp;the&nbsp;display&nbsp;in&nbsp;the&nbsp;animation<br>
+&nbsp;<br>
+Adds&nbsp;1&nbsp;to&nbsp;hour_count</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>agents</strong> = [&lt;sheep_wolf_agentframework.Agent object&gt;, &lt;sheep_wolf_agentframework.Agent object&gt;, &lt;sheep_wolf_agentframework.Agent object&gt;, &lt;sheep_wolf_agentframework.Agent object&gt;, &lt;sheep_wolf_agentframework.Agent object&gt;]<br>
+<strong>animation</strong> = &lt;matplotlib.animation.FuncAnimation object&gt;<br>
+<strong>ax</strong> = &lt;matplotlib.axes._axes.Axes object&gt;<br>
+<strong>canvas</strong> = &lt;matplotlib.backends.backend_tkagg.FigureCanvasTkAgg object&gt;<br>
+<strong>carry_on</strong> = True<br>
+<strong>content</strong> = "&lt;HTML&gt;<font color="#c040c0">\r\n</font>&lt;BODY&gt;<font color="#c040c0">\r\n</font>&lt;STYLE&gt;<font color="#c040c0">\r\n</font>TD {border: 1px solid b...ass='z'&gt;117&lt;/TD&gt;&lt;/TR&gt;<font color="#c040c0">\r\n</font>&lt;/TABLE&gt;<font color="#c040c0">\r\n</font>&lt;/BODY&gt;<font color="#c040c0">\r\n</font>&lt;/HTML&gt;"<br>
+<strong>environment</strong> = [[220.0, 221.0, 222.0, 223.0, 226.0, 230.0, 234.0, 238.0, 241.0, 241.0, 242.0, 243.0, 243.0, 243.0, 244.0, 244.0, 245.0, 247.0, 249.0, 250.0, ...], [221.0, 222.0, 223.0, 224.0, 227.0, 231.0, 234.0, 238.0, 241.0, 241.0, 242.0, 243.0, 243.0, 243.0, 244.0, 244.0, 245.0, 247.0, 248.0, 249.0, ...], [222.0, 223.0, 223.0, 224.0, 228.0, 232.0, 235.0, 239.0, 241.0, 242.0, 242.0, 243.0, 243.0, 243.0, 244.0, 244.0, 245.0, 246.0, 247.0, 248.0, ...], [223.0, 224.0, 224.0, 225.0, 228.0, 232.0, 235.0, 239.0, 242.0, 242.0, 243.0, 243.0, 243.0, 243.0, 243.0, 244.0, 245.0, 246.0, 246.0, 247.0, ...], [226.0, 227.0, 228.0, 228.0, 231.0, 234.0, 237.0, 240.0, 242.0, 243.0, 243.0, 243.0, 243.0, 243.0, 243.0, 244.0, 244.0, 244.0, 245.0, 245.0, ...], [230.0, 231.0, 232.0, 232.0, 235.0, 237.0, 238.0, 240.0, 242.0, 243.0, 243.0, 243.0, 243.0, 243.0, 243.0, 243.0, 244.0, 244.0, 243.0, 243.0, ...], [233.0, 234.0, 235.0, 236.0, 238.0, 239.0, 239.0, 241.0, 242.0, 242.0, 243.0, 243.0, 243.0, 242.0, 243.0, 243.0, 244.0, 243.0, 243.0, 242.0, ...], [237.0, 238.0, 239.0, 240.0, 241.0, 241.0, 241.0, 241.0, 242.0, 242.0, 243.0, 243.0, 242.0, 242.0, 242.0, 243.0, 243.0, 242.0, 241.0, 241.0, ...], [241.0, 242.0, 242.0, 243.0, 243.0, 243.0, 242.0, 242.0, 242.0, 243.0, 243.0, 243.0, 243.0, 242.0, 242.0, 242.0, 242.0, 241.0, 240.0, 240.0, ...], [242.0, 243.0, 243.0, 244.0, 244.0, 243.0, 243.0, 242.0, 243.0, 243.0, 244.0, 243.0, 243.0, 242.0, 242.0, 242.0, 241.0, 240.0, 239.0, 239.0, ...], [244.0, 244.0, 244.0, 244.0, 244.0, 244.0, 243.0, 243.0, 243.0, 244.0, 244.0, 244.0, 243.0, 242.0, 241.0, 241.0, 240.0, 239.0, 238.0, 238.0, ...], [245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 244.0, 244.0, 244.0, 245.0, 245.0, 244.0, 243.0, 241.0, 240.0, 240.0, 240.0, 238.0, 238.0, 237.0, ...], [245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 244.0, 244.0, 244.0, 245.0, 245.0, 244.0, 242.0, 240.0, 240.0, 240.0, 240.0, 239.0, 238.0, 237.0, ...], [245.0, 245.0, 245.0, 244.0, 244.0, 244.0, 244.0, 244.0, 245.0, 245.0, 245.0, 243.0, 242.0, 240.0, 240.0, 240.0, 240.0, 238.0, 237.0, 235.0, ...], [245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 244.0, 245.0, 245.0, 245.0, 244.0, 243.0, 242.0, 240.0, 240.0, 240.0, 239.0, 237.0, 235.0, 233.0, ...], [245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 243.0, 243.0, 241.0, 240.0, 240.0, 238.0, 235.0, 233.0, 231.0, ...], [245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 243.0, 243.0, 243.0, 242.0, 241.0, 240.0, 237.0, 234.0, 232.0, 230.0, ...], [245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 245.0, 244.0, 244.0, 243.0, 243.0, 243.0, 242.0, 240.0, 239.0, 236.0, 233.0, 231.0, 229.0, ...], [245.0, 245.0, 244.0, 244.0, 244.0, 244.0, 245.0, 245.0, 244.0, 244.0, 243.0, 243.0, 243.0, 241.0, 240.0, 239.0, 236.0, 233.0, 232.0, 230.0, ...], [244.0, 244.0, 244.0, 243.0, 243.0, 243.0, 244.0, 244.0, 244.0, 244.0, 243.0, 243.0, 242.0, 241.0, 239.0, 238.0, 236.0, 233.0, 232.0, 230.0, ...], ...]<br>
+<strong>f</strong> = &lt;_io.TextIOWrapper name='in.txt' mode='r' encoding='cp1252'&gt;<br>
+<strong>fig</strong> = &lt;Figure size 700x700 with 1 Axes&gt;<br>
+<strong>full_belly</strong> = 200<br>
+<strong>hour_count</strong> = 5<br>
+<strong>i</strong> = 0<br>
+<strong>menu_bar</strong> = &lt;tkinter.Menu object .!menu&gt;<br>
+<strong>model_menu</strong> = &lt;tkinter.Menu object .!menu.!menu&gt;<br>
+<strong>neighbourhood</strong> = 0<br>
+<strong>no_of_wolves</strong> = 1<br>
+<strong>num_of_agents</strong> = 5<br>
+<strong>num_of_iterations</strong> = 5<br>
+<strong>r</strong> = &lt;Response [200]&gt;<br>
+<strong>reader</strong> = &lt;_csv.reader object&gt;<br>
+<strong>root</strong> = &lt;tkinter.Tk object .&gt;<br>
+<strong>row</strong> = [238.0, 237.0, 235.0, 233.0, 230.0, 228.0, 227.0, 226.0, 225.0, 224.0, 223.0, 223.0, 223.0, 223.0, 222.0, 222.0, 223.0, 223.0, 223.0, 223.0, ...]<br>
+<strong>rowlist</strong> = [238.0, 237.0, 235.0, 233.0, 230.0, 228.0, 227.0, 226.0, 225.0, 224.0, 223.0, 223.0, 223.0, 223.0, 222.0, 222.0, 223.0, 223.0, 223.0, 223.0, ...]<br>
+<strong>sheep_full</strong> = 0<br>
+<strong>soup</strong> = &lt;html&gt;
+&lt;body&gt;
+&lt;style&gt;
+TD {border: 1px solid bla... class="z"&gt;117&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;<br>
+<strong>td_xs</strong> = [&lt;td class="x"&gt;20&lt;/td&gt;, &lt;td class="x"&gt;52&lt;/td&gt;, &lt;...d&gt;, &lt;td class="x"&gt;38&lt;/td&gt;, &lt;td class="x"&gt;93&lt;/td&gt;]<br>
+<strong>td_ys</strong> = [&lt;td class="y"&gt;73&lt;/td&gt;, &lt;td class="y"&gt;91&lt;/td&gt;, &lt;...d&gt;, &lt;td class="y"&gt;70&lt;/td&gt;, &lt;td class="y"&gt;38&lt;/td&gt;]<br>
+<strong>total_sheep_eaten</strong> = [0]<br>
+<strong>value</strong> = 120.0<br>
+<strong>wolves</strong> = [&lt;sheep_wolf_agentframework.Wolf object&gt;]</td></tr></table>
+</body></html>

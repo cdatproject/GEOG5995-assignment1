@@ -24,7 +24,7 @@ no_of_wolves - number of wolves in the model.
 
 
 
-
+The model can only be run once for each GUI.
 
 To use the model within an IDE you can run the version sheep_wolf_model_IDE.py
 
