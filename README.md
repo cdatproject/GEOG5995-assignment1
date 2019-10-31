@@ -89,7 +89,7 @@ practical5_model_xy.py		Creates agents using Agent class in agentframework.py
 							agents move num_of_iterations iterations
 						
 
-Practical5_Agentframework_xy	each agent has (y,x) between [0,100] randomly generated					
+practical5_Agentframework_xy	each agent has (y,x) between [0,100] randomly generated					
 								move behviour added to Agent class - (y,x) move +/-1 randomly
 								protects variable using _x and _y
 								sets up property() attribute for x and y
