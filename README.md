@@ -1,7 +1,7 @@
 # GEOG5995-assignment1
 
 The final model sheep_wolf_model.py was developed in stages (1-9). Testing from earlier stages were removed from the final model
-but left in the earlier versions. Please look at models 1-9 (Practicali_model.py) to see the testing. 
+but left in the earlier versions. Please look at models 1-9 (Practicali_model.py) in the "practicals" folder to see the testing. 
 Where I have noted below ****EXTRA this indicates I have included some extra code not in the final 
 model (sheep_wolf_model.py) so please look at these versions too. Below I list the features which were added in at 
 each stage of the development.
