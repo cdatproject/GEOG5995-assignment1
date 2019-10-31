@@ -10,9 +10,12 @@ The model is called "sheep_wolf_model.py" and uses the "sheep_wolf_framework.py"
 internet connection to work (to get data.html). Otherwise there is a copy of data.html in this repository in the 
 "docs" folder. The docs folder also includes a folder with all the pydoc documentation for the sheep_wolf_model and the practicals.
 
-Sheep_wolf_model has been set up to run from a shell.
-It expects 3 parameters: num_of_agents , num_of_iterations , neighbourhood 
+Sheep_wolf_model has been set up to run from a command line interface.
+It expects 3 integer parameters: 	num_of_agents
+					num_of_iterations 
+					neighbourhood 
 eg  python sheep_wolf_model.py 10 10 10
+
 If there's less than 3 arguments (or wrong type of argument) it will produce an error message.
 If there's more than 3 arguments it will exit.
 To run from within an IDE such as Sypder comment out the sys.argv lines 50-65 and uncomment the lines setting these 3 variables
