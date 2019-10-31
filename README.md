@@ -65,26 +65,26 @@ Note:
 If running the model from Spyder ensure Tkinter is selected from the "Graphics backend" dropdown list in the 
 graphics tab in Tools>Preferences>IPython console> 
 
-Practical1_model.py  -		Makes 2 agents
+practical1_model.py  -		Makes 2 agents
 							Moves 2 agents num_of_iterations iterations 
 							calculates distance betwen 2 agents
 
  
-Practical2_model.py - 		Creates agent list, with coordinates generated randomly for num_of_agents agents
+practical2_model.py - 		Creates agent list, with coordinates generated randomly for num_of_agents agents
 							Uses indexed list referencing
 							Plots 2 agent final positions using Matplotlib
 							****EXTRA - plots most easterly point red
 						
-Practical3_model.py			Shrinks code to move num_of_agents agents
+practical3_model.py			Shrinks code to move num_of_agents agents
 							Implements torus solution to deal with boundary effects
 							Plots num_of_agents agents
 						
-Practical4_model.py 		Records times for model to run for different numbers of agents using perf_counter and magnitudes_of_agents
+practical4_model.py 		Records times for model to run for different numbers of agents using perf_counter and 							magnitudes_of_agents
 							Defines distance_between function, eliminating duplicate testing between agents
 							****EXTRA plots num_of_agents against time taken for model to run
 							****EXTRA prints minimum and maximum distance between agents
 
-Practical5_model_xy.py		Creates agents using Agent class in agentframework.py
+practical5_model_xy.py		Creates agents using Agent class in agentframework.py
 							num_of_agents created and added to agents container
 							agents move num_of_iterations iterations
 						
@@ -94,20 +94,20 @@ Practical5_Agentframework_xy	each agent has (y,x) between [0,100] randomly gener
 								protects variable using _x and _y
 								sets up property() attribute for x and y
 				
-Practical6_model_xy.py		uses csv reader to import in.txt raster file into environment
+practical6_model_xy.py		uses csv reader to import in.txt raster file into environment
 							****EXTRA sets x and y possible dimensions same as environment
 							pass environment into each agent when it is created
 							eat() called for each agent after move()
 							****EXTRA environment written out to environment_eaten.txt at the end
-							agents_stores.txt created with total amount stored by all the agents on a line, appended for each time model runs
+							agents_stores.txt created with total amount stored by all the agents on a line, 							appended for each time model runs
 							****EXTRA appends total of all agents stores to all_agents_stores_total.txt
 							
-Practical6_Agentframework_xy	pass environment variable into Agent constructor
+practical6_Agentframework_xy	pass environment variable into Agent constructor
 								****EXTRA passes x_dimension and y_dimenson into constructor function
 								Create store for each agent with starting value = 0
 								define eat() for sheep to eat 10 if environment >=10 at its location
 								__str__(self) overriden to display coordinates and store 
-								else added to eat() so agents eat last bits without leaving negative values
+								else added to eat() so agents eat last bits without leaving negative 									values
 								****EXTRA if added to eat() for agent(sheep) to be sick if store >100
 								
 practical7_model.py			all agents contain list of all other agents
