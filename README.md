@@ -11,9 +11,9 @@ internet connection to work (to get data.html). Otherwise there is a copy of dat
 "docs" folder. The docs folder also includes a folder with all the pydoc documentation for the sheep_wolf_model and the practicals.
 
 Sheep_wolf_model has been set up to run from a command line interface.
-It expects 3 integer parameters: 	num_of_agents
-					num_of_iterations 
-					neighbourhood 
+It expects positive 3 integer parameters: 	num_of_agents
+						num_of_iterations 
+						neighbourhood 
 eg  python sheep_wolf_model.py 10 10 10
 
 If there's less than 3 arguments (or wrong type of argument) it will produce an error message.
@@ -99,7 +99,7 @@ Practical6_model_xy.py		uses csv reader to import in.txt raster file into enviro
 							pass environment into each agent when it is created
 							eat() called for each agent after move()
 							****EXTRA environment written out to environment_eaten.txt at the end
-							****EXTRA agents_stores.txt created with total amount stored by all the agents on a line, appended for each time model runs
+							agents_stores.txt created with total amount stored by all the agents on a line, appended for each time model runs
 							****EXTRA appends total of all agents stores to all_agents_stores_total.txt
 							
 Practical6_Agentframework_xy	pass environment variable into Agent constructor
@@ -111,20 +111,20 @@ Practical6_Agentframework_xy	pass environment variable into Agent constructor
 								****EXTRA if added to eat() for agent(sheep) to be sick if store >100
 								
 practical7_model.py			all agents contain list of all other agents
-							Added neighbourhood variable - defines distance within share_with_neighbour is called
-							Shuffles agent order before each iteration to prevent model artifacts
-							adds in sysargv arguments to run from command line setting num_of_iterations, num_of_agents and neighbourhood from command line call
-							note practical7_model.html generated with sysargv commented out due to issue with pydoc running
+						Added neighbourhood variable - defines distance within share_with_neighbour is called
+						Shuffles agent order before each iteration to prevent model artifacts
+						adds in sysargv arguments to run from command line setting num_of_iterations, 							num_of_agents and neighbourhood from command line call
+						note practical7_model.html generated with sysargv commented out due to issue with pydoc 						running
 							
-practical7_Agentframework.py	Create distance_between() method to define distance between 2 agents
-								Create share_with_neighbour method 
-							- if distance between 2 agents < neighbourhood then both stores set to the average of both stores
+practical7_Agentframework.py		Create distance_between() method to define distance between 2 agents
+					Create share_with_neighbour method 
+							- if distance between 2 agents < neighbourhood then both stores set to the 								average of both stores
 
 practical8_model.py			Plots the agents after each iteration using update() function within FuncAnimation
-							defines generator function gen_function() to use as frames argument
-							gen_function() uses 2 stopping conditions - carry_on and num_of_iterations
-							carry_on set to false when all sheep have eaten at least 300
-							Removed code writing agent stores to agents_stores.txt, environment_eaten.txt and all_agents_stores_total.txt
+						defines generator function gen_function() to use as frames argument
+						gen_function() uses 2 stopping conditions - carry_on and num_of_iterations
+						carry_on set to false when all sheep have eaten at least 300
+						Removed code writing agent stores to agents_stores.txt, environment_eaten.txt 							and all_agents_stores_total.txt
 							
 practical8_Agentframework.py no updates
 
