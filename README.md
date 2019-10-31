@@ -10,7 +10,7 @@ The model is called "sheep_wolf_model.py" and uses the "sheep_wolf_framework.py"
 internet connection to work (to get data.html). Otherwise there is a copy of data.html in this repository in the 
 "docs" folder. The docs folder also includes a folder with all the pydoc documentation for the sheep_wolf_model and the practicals.
 
-Sheep_wolf_model has been set up to run from a command line interface.
+Sheep_wolf_model has been set up to run from a command line interface. It can only be run once from each GUI.
 
 It expects positive 3 integer parameters: 	num_of_agents
 						num_of_iterations 
