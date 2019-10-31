@@ -60,16 +60,16 @@ generated randomly with y in [0,100] and x in [0,300]
 
 Summary of each iteration:
 
-1)agents are shuffled to avoid artifact error
-2)wolves chase agents and eat if close enough and still hungry
-3)wolves plotted with a X
-4)wolves traverse +-3
-5)1 added to hour count
-6)agents move +/-1
-7)agents eat 10 (or remainder if environment <10)
-8)agents share store with other agents in their neighbourhood (each gets average of their 2 stores)
-9)stopping condition checked
-10)agents plotted with dots
+1)agents are shuffled to avoid artifact error;
+2)wolves chase agents and eat if close enough and still hungry;
+3)wolves plotted with a X;
+4)wolves traverse +-3;
+5)1 added to hour count;
+6)agents move +/-1;
+7)agents eat 10 (or remainder if environment <10);
+8)agents share store with other agents in their neighbourhood (each gets average of their 2 stores);
+9)stopping condition checked;
+10)agents plotted with dots;
 
 
 Running the model (sheep_wolf_model.py) opens 2 windows ("Figure 1" and "Sheep"). Both windows must be left open. 
