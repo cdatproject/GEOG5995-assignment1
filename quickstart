@@ -1,0 +1,31 @@
+sheep_wolf_model.py has been set up to run from a command line interface. 
+
+It expects 3 integer parameters: 
+								num_of_agents 
+								num_of_iterations 
+								neighbourhood 
+						
+								eg python sheep_wolf_model.py 10 100 20
+						
+Running the model (sheep_wolf_model.py) opens 2 windows ("Figure 1" and "Sheep"). Both windows must be left open. 
+In the "Sheep" window select "Run model" from the "Model" dropdown menu to run the model. The sheep are plotted 
+with circles and the wolves are plotted by crosses. Select "END" from the "Model" dropdown menu when you are finished, 
+and then close the Tkinter window manually if it is still open. This needs to be done for the output files to be created.
+
+A message will pop up saying how many sheep have been eaten and the print output will tell you how many wolves 
+there were. An output file called model_data.txt is appended to for each run and will list the time it ran, number 
+of agents, number of iterations, number of wolves, and number of sheep eaten. 
+
+
+Variables you may wish to alter manually at the top of the code:
+
+full_belly - stopping condition. Once all sheeps stores are equal or greater than this amount the model stops. 
+no_of_wolves - number of wolves in the model.
+
+
+
+
+
+To use the model within an IDE you can run the version sheep_wolf_model_IDE.py
+
+
