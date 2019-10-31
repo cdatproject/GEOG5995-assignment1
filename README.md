@@ -1,7 +1,7 @@
-# GEOG5995-assignment1
+# GEOG5995-assignment1: sheep_wolf_model.py
 
 The final model sheep_wolf_model.py was developed in stages (1-9). Testing from earlier stages were removed from the final model
-but left in the earlier versions. Please look at models 1-9 (Practicali_model.py) in the "practicals" folder to see the testing. 
+but left in the earlier versions. Please look at models 1-8 (Practicali_model.py) in the "practicals" folder to see the testing. 
 Where I have noted below ****EXTRA this indicates I have included some extra code not in the final 
 model (sheep_wolf_model.py) so please look at these versions too. Below I list the features which were added in at 
 each stage of the development.
@@ -11,6 +11,7 @@ internet connection to work (to get data.html). Otherwise there is a copy of dat
 "docs" folder. The docs folder also includes a folder with all the pydoc documentation for the sheep_wolf_model and the practicals.
 
 Sheep_wolf_model has been set up to run from a command line interface.
+
 It expects positive 3 integer parameters: 	num_of_agents
 						num_of_iterations 
 						neighbourhood 
@@ -18,7 +19,11 @@ eg  python sheep_wolf_model.py 10 10 10
 
 If there's less than 3 arguments (or wrong type of argument) it will produce an error message.
 If there's more than 3 arguments it will exit.
-To run from within an IDE such as Sypder comment out the sys.argv lines 50-65 and uncomment the lines setting these 3 variables
+To run from within an IDE such as Sypder comment out the sys.argv lines 50-65 and uncomment the lines setting these 3 variables or use the sheep_wolf_model_IDE.py version.
+
+Variables you may wish to adjust within sheep_wolf_model.py are:
+full_belly - stopping condition. Once all sheeps stores are equal or greater than this amount the model stops.
+no_of_wolves - number of wolves in the model.
 
 This is an agent based Python model running in a GUI containing two classes - Agents and Wolves.
 The Agents represent sheep grazing an environment which is representing an outdoor landscape and the second 
@@ -57,12 +62,22 @@ generated randomly with y in [0,100] and x in [0,300]
 Running the model (sheep_wolf_model.py) opens 2 windows ("Figure 1" and "Sheep"). Both windows must be left open. 
 In the "Sheep" window select "Run model" from the "Model" dropdown menu to run the model. The sheep are plotted 
 with circles and the wolves are plotted by crosses. Select "END" from the "Model" dropdown menu when you are finished.
-
 A message will pop up saying how many sheep have been eaten and the print output will tell you how many wolves 
-there were. An output file called model_data.txt is appended to for each run and will list the time it ran, number 
-of agents, number of iterations, number of wolves, and number of sheep eaten. 
-Note: 
-If running the model from Spyder ensure Tkinter is selected from the "Graphics backend" dropdown list in the 
+there were. 
+
+OUTPUT files
+NOTE 1: these files will only be written if the GUI window is closed using END from the dropdown menu, followed by manually closing the Tkinter window
+
+model_data.txt  - is appended to for each run and will list the time it ran, number 
+of agents, number of iterations, number of wolves, number of sheep eaten and whether the sheep full stopping conditions was
+reached before the number of iterations were completed. 
+
+agents_stores.txt writes out the total amount stored by each of the agents on a line. Appends the data to the file, rather than
+clearing it each time it runs. 
+
+environment_eaten.txt - this contains the environment after the model has been run
+
+NOTE 2: If running the model from Spyder ensure Tkinter is selected from the "Graphics backend" dropdown list in the 
 graphics tab in Tools>Preferences>IPython console> 
 
 practical1_model.py  -		Makes 2 agents
