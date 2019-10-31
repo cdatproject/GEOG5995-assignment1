@@ -19,7 +19,7 @@ eg  python sheep_wolf_model.py 10 10 10
 
 If there's less than 3 arguments (or wrong type of argument) it will produce an error message.
 If there's more than 3 arguments it will exit.
-To run from within an IDE such as Sypder comment out the sys.argv lines 50-65 and uncomment the lines setting these 3 variables
+To run from within an IDE such as Sypder comment out the sys.argv lines 50-65 and uncomment the lines setting these 3 variables or use the sheep_wolf_model_IDE.py version.
 
 Variables you may wish to adjust within sheep_wolf_model.py are:
 full_belly - stopping condition. Once all sheeps stores are equal or greater than this amount the model stops.
