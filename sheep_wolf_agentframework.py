@@ -217,12 +217,12 @@ class Wolf():
                     #print("before eating, total sheep eaten: ", total_sheep_eaten)
                     if self.sheep_eaten < 3:
                         print("wolf eats sheep")
-                        print("wolf(y,x): ", self._y, self._x)
+                        #print("wolf(y,x): ", self._y, self._x)
                         self._y = sheep_i._y
                         self._x = sheep_i._x
                         sheep.remove(sheep_i)
-                        print("sheep(y,x): ", sheep_i._y, sheep_i._x)
-                        print("After chasing, wolf(y,x): ", self._y, self._x)
+                        #print("sheep(y,x): ", sheep_i._y, sheep_i._x)
+                        #print("After chasing, wolf(y,x): ", self._y, self._x)
                         print("Number of sheep left: ",len(sheep))
                         total_sheep_eaten[0] +=1
                         self.sheep_eaten +=1

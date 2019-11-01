@@ -85,7 +85,7 @@ Set number of wolves
 Set total_sheep_eaten to 0
 set hour count to 0
 set sheep_full to 0
-set full_belly to 0
+set full_belly
 """
 
 #num_of_agents = 5
@@ -102,7 +102,7 @@ total_sheep_eaten = [0]
 hour_count = 0 # used for resetting wolves hunger every 24 iterations
 #global sheep_full
 sheep_full=0  #used to determine value of carry_on stopping condition
-full_belly=200 # used to determine value of carry_on stopping condition
+full_belly=300 # used to determine value of carry_on stopping condition
 """
 Set up the environment using in.txt
 """
