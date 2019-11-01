@@ -55,7 +55,7 @@ from datetime import datetime # datetime object containing current date and time
 # set sys.argv arguments and exit if incorrect number entered
 # """
 # =============================================================================
-#sys.argv[0] = "sheep_wolf__modelargtest.py"
+#sys.argv[0] = "sheep_wolf__model.py"
 #num_of_agents = int(sys.argv[1])
 #num_of_iterations  = int(sys.argv[2])
 #neighbourhood = int(sys.argv[3])
@@ -199,10 +199,10 @@ def update(frame_number):
 #        print("after traverse",wolves[i]._x,wolves[i]._y )
 #        print("hour count: ", hour_count) checks hour_count
         if hour_count%24 == 0: # to reset hour_counter every 24 iterations
-            print("no of sheep wolf has eaten: ", wolves[i].sheep_eaten)
-            print("wolf is hungry again")
+#            print("no of sheep wolf has eaten: ", wolves[i].sheep_eaten)
+#            print("wolf is hungry again")
             wolves[i].sheep_eaten = 0
-            print("sheep eaten reset to: ",wolves[i].sheep_eaten)
+#            print("sheep eaten reset to: ",wolves[i].sheep_eaten)
 #   for i in range(num_of_agents):    #removed to deal with removing agents
     for agent in agents:
         agent.move()

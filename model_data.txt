@@ -1,0 +1,66 @@
+2019-11-01 11:48:27.493884
+No of sheep: 20
+No of iterations: 200
+No of wolves: 4
+No of sheep eaten: 3
+No of alive sheep full: 17
+Carry on stopping condition (all sheep full) applied 
+before number of iterations reached: True
+End of model run 
+ 
+ 
+2019-11-01 11:48:54.064663
+No of sheep: 20
+No of iterations: 200
+No of wolves: 0
+No of sheep eaten: 0
+No of alive sheep full: 20
+Carry on stopping condition (all sheep full) applied 
+before number of iterations reached: True
+End of model run 
+ 
+ 
+2019-11-01 11:49:05.562841
+No of sheep: 20
+No of iterations: 200
+No of wolves: 1
+No of sheep eaten: 0
+No of alive sheep full: 20
+Carry on stopping condition (all sheep full) applied 
+before number of iterations reached: True
+End of model run 
+ 
+ 
+2019-11-01 11:49:50.556692
+No of sheep: 20
+No of iterations: 200
+No of wolves: 5
+No of sheep eaten: 0
+No of alive sheep full: 20
+Carry on stopping condition (all sheep full) applied 
+before number of iterations reached: True
+End of model run 
+ 
+ 
+2019-11-01 11:50:40.745877
+No of sheep: 20
+No of iterations: 200
+No of wolves: 5
+No of sheep eaten: 2
+No of alive sheep full: 18
+Carry on stopping condition (all sheep full) applied 
+before number of iterations reached: True
+End of model run 
+ 
+ 
+2019-11-01 11:53:49.392840
+No of sheep: 30
+No of iterations: 20
+No of wolves: 5
+No of sheep eaten: 3
+No of alive sheep full: 0
+Carry on stopping condition (all sheep full) applied 
+before number of iterations reached: False
+End of model run 
+ 
+ 
