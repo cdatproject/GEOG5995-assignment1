@@ -1,9 +1,22 @@
-2019-10-31 13:35:17.770206
+2019-11-01 01:06:51.730671
 No of sheep: 10
-No of iterations: 10
-No of wolves: 10
-No of sheep eaten: 2
-No of sheep full: 8
+No of iterations: 20
+No of wolves: 1
+No of sheep eaten: 0
+No of alive sheep full: 0
+Carry on stopping condition (all sheep full) applied 
+before number of iterations reached: False
+End of model run 
+ 
+ 
+2019-11-01 01:07:48.564161
+No of sheep: 20
+No of iterations: 200
+No of wolves: 5
+No of sheep eaten: 0
+No of alive sheep full: 20
+Carry on stopping condition (all sheep full) applied 
+before number of iterations reached: True
 End of model run 
  
  
