@@ -98,8 +98,8 @@ neighbourhood = 20
 global carry_on	 #used for stopping condition
 carry_on = True
 wolves = []
-no_of_wolves = 2 #use if want to keep wolves constant for testing
-#no_of_wolves = random.randint(0,(round(num_of_agents/5)+1))
+#no_of_wolves = 2 #use if want to keep wolves constant for testing
+no_of_wolves = random.randint(0,(round(num_of_agents/5)+1))
 total_sheep_eaten = [0]
 hour_count = 0 # used for resetting wolves hunger every 24 iterations
 #global sheep_full
