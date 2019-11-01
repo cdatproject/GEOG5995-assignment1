@@ -53,7 +53,7 @@ import sys
 """
 set sys.argv arguments and exit if incorrect number entered
 """
-sys.argv[0] = "sheep_wolf__modelargtest.py"
+sys.argv[0] = "sheep_wolf__model.py"
 num_of_agents = int(sys.argv[1])
 num_of_iterations  = int(sys.argv[2])
 neighbourhood = int(sys.argv[3])
